@@ -17,6 +17,8 @@ app.get('/three/params/:first/:second/:third', function (req, res) {
   res.send(req.params.first + req.params.second + req.params.third);
 }); // 5500 // ab -c 400 -n 200000 http://localhost:3000/three/params/first/second/third
  
-app.listen(3000);
+app.listen(3000, () => {
+  console.log('Express server listening on port 3000');
+});
 
 

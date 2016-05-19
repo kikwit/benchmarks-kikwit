@@ -7,5 +7,5 @@ var server = http.createServer((request, response) => {
 
 server.listen(3000);
 
-console.log("Server is listening");
+console.log('NodeJS (vanilla) server listening on port 3000');
 

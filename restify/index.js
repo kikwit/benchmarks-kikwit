@@ -21,6 +21,8 @@ server.get('/three/params/:first/:second/:third', function (req, res, next) {
   next();
 }); // 4800 // ab -c 400 -n 200000 -H "accept: text/plain" http://localhost:3000/three/params/first/second/third
  
-server.listen(3000);
+server.listen(3000, () => {
+  console.log('Restify server listening on port 3000');
+});
 
 
