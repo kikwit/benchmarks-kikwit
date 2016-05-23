@@ -1,0 +1,11 @@
+{
+  "name": "benchmark-diet",
+  "version": "1.0.3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "diet": "^0.10.7"
+  }
+}
