@@ -1,10 +1,10 @@
-### How to run load tests
+### Steps
 
 1. cd to the selected framework subdirectory.
 
 2. Run `npm install`
 
-3. Run `npm start`.
+3. Run `npm start`
 
 4. On a second terminal window, run the following in turn then check the caclculate the average _Requests per second_. 
    I used [Apache Bench](https://httpd.apache.org/docs/2.4/programs/ab.html) but you're free to use your prefered load testing tool.
