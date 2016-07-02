@@ -1,11 +1,11 @@
 {
   "name": "benchmark-restify",
-  "version": "1.0.3",
+  "version": "4.1.1",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "restify": "^4.0.4"
+    "restify": "^4.1.1"
   }
 }

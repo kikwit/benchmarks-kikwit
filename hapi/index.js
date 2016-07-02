@@ -16,7 +16,7 @@ server.route({
 
         return reply('Zero params');
     }
-}); // 2850 // ab -c 300 -n 200000 http://localhost:3000/zero/params 
+}); // 3100 // ab -c 300 -n 200000 http://localhost:3000/zero/params 
 
 server.route({
     method: 'GET',
@@ -25,7 +25,7 @@ server.route({
 
         return reply(request.params.first);
     }
-});  // 2650 // ab -c 300 -n 200000 http://localhost:3000/one/param/first
+});  // 2790 // ab -c 300 -n 200000 http://localhost:3000/one/param/first
 
 server.route({
     method: 'GET',
@@ -34,7 +34,7 @@ server.route({
 
         return reply(request.params.first + req.params.second);
     }
-}); // 2670 // ab -c 300 -n 200000 http://localhost:3000/two/params/first/second
+}); // 2770 // ab -c 300 -n 200000 http://localhost:3000/two/params/first/second
 
 server.route({
     method: 'GET',
@@ -43,7 +43,7 @@ server.route({
 
         return reply(request.params.first + req.params.second + req.params.third);
     }
-}); // 2680 // ab -c 300 -n 200000 http://localhost:3000/three/params/first/second/third
+}); // 2900 // ab -c 300 -n 200000 http://localhost:3000/three/params/first/second/third
 
 server.start((err) => {
 
