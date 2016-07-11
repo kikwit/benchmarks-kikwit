@@ -14,36 +14,36 @@ server.route({
     path:'/zero/params', 
     handler: function (request, reply) {
 
-        return reply('Zero params');
+        return reply('Zero params').header('Connection', 'close');
     }
-}); // 3100 // ab -c 300 -n 200000 http://localhost:3000/zero/params 
+}); 
 
 server.route({
     method: 'GET',
     path:'/one/param/:first', 
     handler: function (request, reply) {
 
-        return reply(request.params.first);
+        return reply(request.params.first).header('Connection', 'close');
     }
-});  // 2790 // ab -c 300 -n 200000 http://localhost:3000/one/param/first
+}); 
 
 server.route({
     method: 'GET',
     path:'/two/params/:first/:second', 
     handler: function (request, reply) {
 
-        return reply(request.params.first + req.params.second);
+        return reply(request.params.first + req.params.second).header('Connection', 'close');
     }
-}); // 2770 // ab -c 300 -n 200000 http://localhost:3000/two/params/first/second
+}); 
 
 server.route({
     method: 'GET',
     path:'/three/params/:first/:second/:third', 
     handler: function (request, reply) {
 
-        return reply(request.params.first + req.params.second + req.params.third);
+        return reply(request.params.first + req.params.second + req.params.third).header('Connection', 'close');
     }
-}); // 2900 // ab -c 300 -n 200000 http://localhost:3000/three/params/first/second/third
+});
 
 server.start((err) => {
 
