@@ -1,9 +1,9 @@
 {
   "name": "benchmark-express",
   "version": "4.14.0",
-  "main": "index.js",
+  "main": "index-bench.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index-bench.js"
   },
   "dependencies": {
     "express": "4.14.0"

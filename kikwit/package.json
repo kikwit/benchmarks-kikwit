@@ -1,12 +1,12 @@
 {
 	"name": "benchmark-kikwit",
 	"version": "0.6.1",
-	"main": "boot.js",
+	"main": "index-bench.js",
 	"engines": {
 		"node": "^6.0.0"
 	},
 	"scripts": {
-		"start": "node boot.js"
+		"start": "node index-bench.js"
 	},
 	"dependencies": {
 		"babel-core": "^6.10.4",

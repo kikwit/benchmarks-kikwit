@@ -8,7 +8,7 @@ app.use(function *(){
 }); 
 
 app.listen(3000, () => {
-  console.log('Koa server listening on port 3000');
+  console.log('Koa - Benchmark start...');
 });
 
 

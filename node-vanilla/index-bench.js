@@ -8,5 +8,5 @@ var server = http.createServer((request, response) => {
 
 server.listen(3000);
 
-console.log('NodeJS (vanilla) server listening on port 3000');
+console.log('NodeJS (vanilla) - Benchmark start...');
 

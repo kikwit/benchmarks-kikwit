@@ -4,4 +4,5 @@ git clone https://github.com/kikwit/benchmarks-kikwit.git && cd benchmarks-kikwi
 chmod +x ./bench
 ./bench
 ```
-Check the results in __benchmarks.txt__ file.
+Benchmark results printed on the terminal and also written into __benchmarks.txt__ file.
+

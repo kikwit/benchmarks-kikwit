@@ -1,9 +1,9 @@
 {
   "name": "benchmark-hapi",
   "version": "13.4.1",
-  "main": "index.js",
+  "main": "index-bench.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index-bench.js"
   },
   "dependencies": {
     "hapi": "^13.4.1"

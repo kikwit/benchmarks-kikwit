@@ -50,6 +50,6 @@ server.start((err) => {
     if (err) {
         throw err;
     }
-    console.log('Hapi server listening on port 3000');
+    console.log('Hapi - Benchmark start...');
 });
 
