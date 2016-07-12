@@ -1,5 +1,5 @@
 pkill -f "node index-bench.js"
-sleep 3
+sleep 10
 
 echo "Benchmark session start"
 
@@ -14,7 +14,7 @@ ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Express - Benchmark end"
-sleep 3
+sleep 10
 
 cd ../hapi
 echo >> ../benchmarks.txt
@@ -27,7 +27,7 @@ ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Hapi - Benchmark end"
-sleep 3
+sleep 10
 
 cd ../kikwit
 echo >> ../benchmarks.txt
@@ -40,7 +40,7 @@ ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Kikwit - Benchmark end"
-sleep 3
+sleep 10
 
 cd ../koa
 echo >> ../benchmarks.txt
@@ -50,7 +50,7 @@ npm install && npm start & sleep 10
 ab -q -k -c 100 -n 100000 http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Koa - Benchmark end"
-sleep 3
+sleep 10
 
 cd ../node-vanilla
 echo >> ../benchmarks.txt
@@ -60,7 +60,7 @@ npm start & sleep 10
 ab -q -k -c 100 -n 100000 http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "NodeJS (vanilla) - Benchmark end"
-sleep 3
+sleep 10
 
 cd ../restify
 echo >> ../benchmarks.txt
@@ -79,5 +79,4 @@ cd ../
 cat benchmarks.txt
 
 echo "Benchmark session end"
-
 
