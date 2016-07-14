@@ -1,82 +1,127 @@
 pkill -f "node index-bench.js"
+
+echo "Installing dependencies..."
+
+cd ./express 
+npm --silent install
+
+cd ../hapi 
+npm --silent install
+
+cd ../kikwit 
+npm --silent install
+
+cd ../koa 
+npm --silent install
+
+cd ../restify 
+npm --silent install
+
+echo "Installed dependencies"
+
 sleep 10
 
 echo "Benchmark session start"
 
-cd ./express
+cd ../express
 echo > ../benchmarks.txt
 echo Express >> ../benchmarks.txt
 echo "--------------" >> ../benchmarks.txt
-npm install && npm start & sleep 10
+npm start&
+sleep 5
+echo "Express - Benchmark started"
+echo "..."
 ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
-echo "Express - Benchmark end"
-sleep 10
+echo "Express - Benchmark completed"
+echo "..."
+sleep 5
 
 cd ../hapi
 echo >> ../benchmarks.txt
 echo Hapi >> ../benchmarks.txt
 echo "--------------" >> ../benchmarks.txt
-npm install && npm start & sleep 10
+npm start&
+sleep 5
+echo "Hapi - Benchmark started"
+echo "..."
 ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
-echo "Hapi - Benchmark end"
-sleep 10
+echo "Hapi - Benchmark completed"
+echo "..."
+sleep 5
 
 cd ../kikwit
 echo >> ../benchmarks.txt
 echo Kikwit >> ../benchmarks.txt
 echo "--------------" >> ../benchmarks.txt
-npm install && npm start & sleep 10
+npm start&
+sleep 5
+echo "Kikwit - Benchmark started"
+echo "..."
 ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
-echo "Kikwit - Benchmark end"
-sleep 10
+echo "Kikwit - Benchmark completed"
+echo "..."
+sleep 5
 
 cd ../koa
 echo >> ../benchmarks.txt
 echo Koa >> ../benchmarks.txt
 echo "--------------" >> ../benchmarks.txt
-npm install && npm start & sleep 10
+npm start&
+sleep 5
+echo "Koa - Benchmark started"
+echo "..."
 ab -q -k -c 100 -n 100000 http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
-echo "Koa - Benchmark end"
-sleep 10
+echo "Koa - Benchmark completed"
+echo "..."
+sleep 5
 
 cd ../node-vanilla
 echo >> ../benchmarks.txt
 echo Node-Vanilla >> ../benchmarks.txt
 echo "--------------" >> ../benchmarks.txt
-npm start & sleep 10
+npm start&
+sleep 5
+echo "NodeJS (vanilla) - Benchmark started"
+echo "..."
 ab -q -k -c 100 -n 100000 http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
-echo "NodeJS (vanilla) - Benchmark end"
-sleep 10
+echo "NodeJS (vanilla) - Benchmark completed"
+echo "..."
+sleep 5
 
 cd ../restify
 echo >> ../benchmarks.txt
 echo Restify >> ../benchmarks.txt
 echo "--------------" >> ../benchmarks.txt
-npm install && npm start & sleep 10
+npm start&
+sleep 5
+echo "Restify - Benchmark started"
+echo "..."
 ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
 ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
-echo "Restify - Benchmark end"
+echo
+echo "Restify - Benchmark completed"
+echo "..."
+sleep 5
 
 cd ../
 
 cat benchmarks.txt
 
 echo "Benchmark session end"
-

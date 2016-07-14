@@ -50,6 +50,6 @@ server.start((err) => {
     if (err) {
         throw err;
     }
-    console.log('Hapi - Benchmark start...');
+    console.log('Hapi - Server started');
 });
 

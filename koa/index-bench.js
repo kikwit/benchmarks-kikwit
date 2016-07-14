@@ -8,7 +8,7 @@ app.use(function *(){
 }); 
 
 app.listen(3000, () => {
-  console.log('Koa - Benchmark start...');
+  console.log('Koa - Server started');
 });
 
 

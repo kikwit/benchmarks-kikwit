@@ -26,7 +26,7 @@ server.get('/three/params/:first/:second/:third', function (req, res, next) {
 }); // 4800 // ab -c 300 -n 200000 http://localhost:3000/three/params/first/second/third
  
 server.listen(3000, () => {
-  console.log('Restify - Benchmark start...');
+  console.log('Restify - Server started');
 });
 
 

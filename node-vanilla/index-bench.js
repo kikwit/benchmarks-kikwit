@@ -6,7 +6,8 @@ var server = http.createServer((request, response) => {
   response.end("Zero params");
 }); // 10200
 
-server.listen(3000);
+server.listen(3000, () => {
+  console.log('NodeJS (vanilla) - Server started');
+});
 
-console.log('NodeJS (vanilla) - Benchmark start...');
 

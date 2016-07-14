@@ -22,7 +22,7 @@ app.get('/three/params/:first/:second/:third', function (req, res) {
 });
  
 app.listen(3000, () => {
-  console.log('Express - Benchmark start...');
+  console.log('Express - Server started');
 });
 
 

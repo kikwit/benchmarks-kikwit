@@ -5,7 +5,7 @@ import { Server } from 'kikwit';
 const server = new Server();
 
 server.start().then(() => {
-    console.log('Kikwit - Benchmark start...');
+    console.log('Kikwit - Server started');
 });
 
 
