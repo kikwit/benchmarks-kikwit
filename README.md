@@ -1,5 +1,5 @@
 ### How to run
-**Note**: Benchmark script works on *nixes platforms only.
+**Note**: Benchmark script works on *nix platforms only.
 
 First make sure you have `node` (and `npm`) installed and on the `$PATH`.
 
