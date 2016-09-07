@@ -1,36 +1,33 @@
 
 Express
 --------------
-Requests per second:    5452.70 [#/sec] (mean)
-Requests per second:    5387.99 [#/sec] (mean)
-Requests per second:    5331.12 [#/sec] (mean)
-Requests per second:    4864.91 [#/sec] (mean)
+Requests per second:    5410.96 [#/sec] (mean)
+Requests per second:    5349.07 [#/sec] (mean)
+Requests per second:    5414.65 [#/sec] (mean)
+Requests per second:    5255.12 [#/sec] (mean)
 
 Hapi
 --------------
-Requests per second:    2918.84 [#/sec] (mean)
-Requests per second:    3779.30 [#/sec] (mean)
-Requests per second:    3774.05 [#/sec] (mean)
-Requests per second:    3779.98 [#/sec] (mean)
+Requests per second:    1440.07 [#/sec] (mean)
 
 Kikwit
 --------------
-Requests per second:    8137.20 [#/sec] (mean)
-Requests per second:    8159.12 [#/sec] (mean)
-Requests per second:    8360.99 [#/sec] (mean)
-Requests per second:    8222.61 [#/sec] (mean)
+Requests per second:    7478.68 [#/sec] (mean)
+Requests per second:    7337.67 [#/sec] (mean)
+Requests per second:    7373.43 [#/sec] (mean)
+Requests per second:    7187.76 [#/sec] (mean)
 
 Koa
 --------------
-Requests per second:    6100.59 [#/sec] (mean)
+Requests per second:    6117.93 [#/sec] (mean)
 
 Node-Vanilla
 --------------
-Requests per second:    9287.95 [#/sec] (mean)
+Requests per second:    9684.44 [#/sec] (mean)
 
 Restify
 --------------
-Requests per second:    4377.93 [#/sec] (mean)
-Requests per second:    4344.31 [#/sec] (mean)
-Requests per second:    4305.89 [#/sec] (mean)
-Requests per second:    4274.21 [#/sec] (mean)
+Requests per second:    4210.60 [#/sec] (mean)
+Requests per second:    4183.69 [#/sec] (mean)
+Requests per second:    4131.03 [#/sec] (mean)
+Requests per second:    4162.61 [#/sec] (mean)

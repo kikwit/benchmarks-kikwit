@@ -1,11 +1,11 @@
 {
   "name": "benchmark-express",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "main": "index-bench.js",
   "scripts": {
     "start": "node index-bench.js"
   },
   "dependencies": {
-    "koa": "^1.2.0"
+    "koa": "^1.2.2"
   }
 }
