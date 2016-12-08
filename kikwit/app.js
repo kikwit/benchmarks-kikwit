@@ -6,14 +6,14 @@ const server = new Server();
 
 server.configure(config => {
 
-    config.addFromService('defaultConfiguration');
-    config.addFromService(`${config.environment}Configuration`);
-    
+    config.addJavaScriptFile('config/default.js');
+    config.addJavaScriptFile(`config/${config.environment}.js`, true);    
+ 
     if (config.isEnvironment('development')) {
         config.addUserConfig();
     }
     
-    config.addEnvironmentVariables();
+    config.addEnvironmentVariables();  
 });
 
 server.start().then(() => {
