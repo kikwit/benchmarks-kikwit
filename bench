@@ -31,10 +31,10 @@ npm start&
 sleep 5
 echo "Express - Benchmark started"
 echo "..."
-ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Express - Benchmark completed"
 echo "..."
@@ -48,10 +48,10 @@ npm start&
 sleep 5
 echo "Hapi - Benchmark started"
 echo "..."
-ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Hapi - Benchmark completed"
 echo "..."
@@ -65,10 +65,10 @@ npm start&
 sleep 5
 echo "Kikwit - Benchmark started"
 echo "..."
-ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Kikwit - Benchmark completed"
 echo "..."
@@ -82,7 +82,7 @@ npm start&
 sleep 5
 echo "Koa - Benchmark started"
 echo "..."
-ab -q -k -c 100 -n 100000 http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "Koa - Benchmark completed"
 echo "..."
@@ -96,7 +96,7 @@ npm start&
 sleep 5
 echo "NodeJS (vanilla) - Benchmark started"
 echo "..."
-ab -q -k -c 100 -n 100000 http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/ | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo "NodeJS (vanilla) - Benchmark completed"
 echo "..."
@@ -110,10 +110,10 @@ npm start&
 sleep 5
 echo "Restify - Benchmark started"
 echo "..."
-ab -q -k -c 100 -n 100000 http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
-ab -q -k -c 100 -n 100000 http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/zero/params | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/one/param/first | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/two/params/first/second | grep "Requests per second:" >> ../benchmarks.txt
+ab -q -k -c 400 -n 100000 -r http://localhost:3000/three/params/first/second/third | grep "Requests per second:" >> ../benchmarks.txt
 pkill -f "node index-bench.js"
 echo
 echo "Restify - Benchmark completed"
